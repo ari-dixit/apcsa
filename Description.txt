@@ -1,2 +1,0 @@
-- - Always attempt to solve problems on your own and use this as a resource to guide you when you get stuck. - -
-This repository contains the solutions to the CodeHS APCS course. I will update it as I make progress in the course.
