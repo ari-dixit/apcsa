@@ -1,0 +1,4 @@
+This folder contains the solutions to exercizes in Unit 1 of the CodeHS APCS course. 
+
+Don't use this as a substitute for your own work. 
+Instead, always attempt to solve the problem on your own and use this as a resource to guide you when you get stuck. 
