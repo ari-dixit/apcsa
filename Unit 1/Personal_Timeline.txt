@@ -1,0 +1,26 @@
+public class Timeline
+{
+    static void space(){
+            for(int x=1;x<=3;x++){
+                System.out.println("\t|");
+            }
+    }
+        
+    public static void main(String[] args)
+    {
+        
+        System.out.println("Age\t| M/YY - Description");
+        System.out.println("6\t| 4/2011 - Moved to my new house in Ashburn.");
+        space();
+        System.out.println("8\t| 6/2013 - Started school at Creighton's Corner Elem.");
+        space();
+        System.out.println("10\t| 3/2015 - Ran for school president in 5th grade. ");
+        space();
+        System.out.println("12\t| 7/2017 - Got braces for the first time. ");
+        space();
+        System.out.println("14\t| 9/2019 - Started highschool at TJHSST");
+        space();
+        System.out.println("16\t| 2/2021 - Recieved my Learner's Driving Permit. ");
+        
+    }
+}
