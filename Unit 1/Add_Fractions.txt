@@ -1,0 +1,19 @@
+public class AddFractions 
+{
+    public static void main(String[] args)
+    {
+        int num1 = 3;
+        int den1 = 4;
+        int num2 = 5;
+        int den2 = 7;
+        
+        int solutionNum = 3*7+4*5;
+        int solutionDen = 4*7;
+        
+        System.out.println("The numerator of the first fraction is " + num1);
+        System.out.println("The denominator of the first fraction is " + den1);
+        System.out.println("The numerator of the second fraction is " + num2);
+        System.out.println("The denominator of the second fraction is " + den2);
+        System.out.println("The sum of "+num1+"/"+den1+" + "+num2+"/"+den2+" = "+solutionNum+"/"+solutionDen);
+    }
+}

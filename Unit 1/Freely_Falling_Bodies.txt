@@ -1,0 +1,12 @@
+public class FallingBodies
+{
+    public static void main(String[] args)
+    {
+        final double g = 9.8;
+        final double h = .5*g*Math.pow(10, 2);
+        final double v = g*10;
+        
+        System.out.println("Question 1: Height of cliff is " + h + " meters.");
+        System.out.println("Question 2: Velocity of the ball when it hits the ground is: " + v + " m/s.");
+    }
+}
