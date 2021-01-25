@@ -1,0 +1,16 @@
+public class WorkShift
+{
+    public static void main(String[] args)
+    {
+        int hours = 20;
+        int mins = 42;
+        int secs = 16;
+        
+        hours*=60;
+        mins +=hours;
+        mins *= 60;
+        secs +=mins;
+        
+        System.out.println("Shift time in seconds: " + secs);
+    }
+}
