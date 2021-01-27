@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class CastingToDouble
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("First Int: ");
+        int int1 = input.nextInt();
+        
+        System.out.println("Second Int: ");
+        int int2 = input.nextInt();
+        
+        double val = int1/(double)int2;
+        
+        System.out.println(""+val);
+
+    }
+}

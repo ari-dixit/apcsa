@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class CastingToInt
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter a decimal number: ");
+        double val = input.nextDouble();
+        
+        int test = (int)val;
+        
+        System.out.println("Casted int of your double: "+test);
+        
+    }
+}

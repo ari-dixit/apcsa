@@ -1,0 +1,10 @@
+public class IntegerOverflow
+{
+    public static void main(String[] args)
+    {
+        System.out.println("-Max Value: " + Integer.MIN_VALUE);
+        System.out.println("Max Value: " + Integer.MAX_VALUE);
+        System.out.println("-Max Value: " + (Integer.MIN_VALUE-1));
+        System.out.println("Max Value: " + (Integer.MAX_VALUE+1));
+    }
+}
