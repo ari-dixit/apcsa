@@ -1,0 +1,41 @@
+PizzaTester.java:
+----------------
+public class PizzaTester 
+{
+    public static void main(String[] args)
+    {
+        // Test your Pizza class here.
+        Pizza pizza1 = new Pizza("Veggie", "Tomatoes, onions, olives", 10);
+        System.out.println(pizza1);
+        Pizza pizza2 = new Pizza("Veggie", "Tomatoes, onions, olives", 10);
+        System.out.println(pizza2);
+        Pizza pizza3 = new Pizza("Veggie", "Tomatoes, onions, olives", 10);
+        System.out.println(pizza3);
+    }
+}
+
+Pizza.java:
+----------
+public class Pizza
+{
+    // Add the instance variables here
+    private String toppings;
+    private String type;
+    private int size;
+    
+    // Put the constructor here
+    public Pizza(String theType, String theToppings, int theSize){
+        type = theType;
+        toppings = theToppings;
+        size = theSize;
+    }
+    
+    // You don't need to do anything with this method
+    // Used to print the object
+    public String toString()
+    {
+        return size + " inch " + type + " pizza with " + toppings;
+    }
+}
+
+
