@@ -1,0 +1,89 @@
+Calculator.java:
+---------------
+public class Calculator
+{
+    // This class does not need instance variables!
+    
+    // Prints the sum of x and y
+    public void sum(double x, double y)
+    {
+        double result = x + y;
+        System.out.print(x);
+        System.out.print(" + ");
+        System.out.print(y);
+        System.out.print(" = ");
+        System.out.println(result);
+        
+    }
+    
+    // Prints the product of x and y
+    public void multiply(double x, double y)
+    {
+        double result = x * y;
+        System.out.print(x);
+        System.out.print(" * ");
+        System.out.print(y);
+        System.out.print(" = ");
+        System.out.println(result);
+        
+    }
+    
+    // Prints the product of x and y
+    public void divide(double x, double y)
+    {
+        double result = x / y;
+        System.out.print(x);
+        System.out.print(" / ");
+        System.out.print(y);
+        System.out.print(" = ");
+        System.out.println(result);
+        
+    }
+    
+    // Prints the product of x and y
+    public void subtract(double x, double y)
+    {
+        double result = x - y;
+        System.out.print(x);
+        System.out.print(" - ");
+        System.out.print(y);
+        System.out.print(" = ");
+        System.out.println(result);
+        
+    }
+}
+
+
+CalculatorTester.java:
+---------------------
+import java.util.Scanner;
+
+public class CalculatorTester
+{
+    public static void main(String[] args)
+    {
+        // Put your code here
+        // A good place to start is to
+        // create comments like the last exercise
+        // to remind yourself what you need to do
+        
+        //Add Scanner and Calculator
+        Scanner scanner = new Scanner (System.in);
+        Calculator calc = new Calculator();
+        
+        //Ask for and read two double values
+        System.out.println("Enter two doubles");
+        double val1 = scanner.nextDouble();
+        double val2 = scanner.nextDouble();
+        
+        //Print the sum
+        calc.sum(val1, val2);
+        //Print the difference
+        calc.subtract(val1, val2);
+        //Print the product
+        calc.multiply(val1, val2);
+        //Print the quotient
+        calc.divide(val1, val2);
+    }
+}
+
