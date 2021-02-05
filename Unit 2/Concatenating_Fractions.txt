@@ -1,0 +1,67 @@
+Fraction.java:
+-------------
+public class Fraction
+{
+    private int numerator;
+    private int denominator;
+    
+    public Fraction(int numer, int denom)
+    {
+        numerator = numer;
+        denominator = denom;
+    }
+    
+    // Returns the numerator
+    public int getNumerator()
+    {
+        return numerator;
+    }
+    
+    // Returns the denominator
+    public int getDenominator()
+    {
+        return denominator;
+    }
+    
+    
+    // Returns a string representing a fraction
+    // in the form
+    // numerator/denominator
+    public String toString()
+    {
+        return new String(numerator + "/" + denominator);
+    }
+    
+    
+}
+
+
+FractionTester.java:
+-------------------
+import java.util.Scanner;
+
+public class FractionTester
+{
+    public static void main(String[] args)
+    {
+        // Create objects
+        Scanner input = new Scanner(System.in);
+        Fraction half = new Fraction(1, 2);
+        // Ask for input
+        System.out.println("Enter the numerator: ");
+        int numerator = input.nextInt();
+        System.out.println("Enter the numerator: ");
+        int denominator = input.nextInt();
+        // Create a new Fraction with the user's input
+        Fraction user = new Fraction(numerator, denominator);
+        // Add the fractions
+        // Make use of the getDenominator and getNumerator methods
+        Fraction sum = new Fraction(half.getNumerator()*user.getDenominator()+user.getNumerator()*half.getDenominator(), user.getDenominator()*half.getDenominator());
+        // Print out the fractions as an equation
+        // Remember you don't have to call toString yourself!
+        System.out.println(half + " + " + user + " = " + sum);
+        
+        
+    }
+}
+
