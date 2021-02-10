@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class RelativeNumbers
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        // Ask for two numbers
+        System.out.println("Please enter two integers");
+        int first = input.nextInt();
+        int second = input.nextInt();
+        // Compare the numbers as instructed
+        boolean one = first<second;
+        boolean two = first==second;
+        boolean three = first>second;
+        // Display the results
+        System.out.println(first + " < " + second + ": " + one);
+        System.out.println(first + " == " + second + ": " + two);
+        System.out.println(first + " > " + second + ": " + three);
+    }
+}
