@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Basketball
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        
+        // Start by listing the steps you need to take
+        //Get names
+        System.out.println("Enter player one's name:");
+        String p1 = input.next();
+        
+        System.out.println("Enter player two's name:");
+        String p2 = input.next();
+        
+        //Get scores
+        System.out.println("Enter " + p1 + "'s score");
+        int s1 = input.nextInt();
+        
+        System.out.println("Enter " + p2 + "'s score");
+        int s2 = input.nextInt();
+        
+        //Print summaries for both players
+        if(p1.compareTo(p2)>0){
+            System.out.println(p2 + " scored " + s2 + " points");
+            System.out.println(p1 + " scored " + s1 + " points");
+        }
+        if(p1.compareTo(p2)<0){
+            System.out.println(p1 + " scored " + s1 + " points");
+            System.out.println(p2 + " scored " + s2 + " points");
+        }
+        //Find winner
+        if(s1>s2)
+            System.out.println(p1 + " wins!");
+        else
+            System.out.println(p2 + " wins!");
+        
+    }
+}
