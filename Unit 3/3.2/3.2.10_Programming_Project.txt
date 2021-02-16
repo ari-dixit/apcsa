@@ -1,0 +1,120 @@
+MyProgram.java:
+--------------
+public class MyProgram
+{
+    public static void main(String[] args)
+    {
+        //Test Equilateral Triangle
+        Side triangle1 = new Side(2, 2, 2);
+        System.out.println(triangle1);
+        
+        //Test Isosceles Triangle
+        Side triangle2 = new Side(3, 3, 5);
+        System.out.println(triangle2);
+        
+        //Test Scalene Triangle
+        Side triangle3 = new Side(3, 4, 5);
+        System.out.println(triangle3);
+        
+        //Test Square
+        Side rectangle1 = new Side(3, 3, 3, 3);
+        System.out.println(rectangle1);
+        
+        //Test Rectangle
+        Side rectangle2 = new Side(3, 3, 5, 5);
+        System.out.println(rectangle2);
+        
+        //Test Regular Pentagon
+        Side pentagon1 = new Side(2, 2, 2, 2, 2);
+        System.out.println(pentagon1);
+        
+        //Test Pentagon
+        Side pentagon2 = new Side(3, 4, 4, 2, 5);
+        System.out.println(pentagon2);
+    }
+}
+
+
+Side.java:
+---------
+public class Side
+{
+    //Declare variables needed
+    int s1, s2, s3, s4, s5 = 0;
+    boolean triangle, rectangle, pentagon;
+    
+    //Create constructors
+    //Triangle Cnstructor
+    public Side(int side1, int side2, int side3){
+        s1 = side1;
+        s2 = side2;
+        s3 = side3;
+        triangle = true;
+    }
+    
+    //Rectangle/Square Constructor
+    public Side(int side1, int side2, int side3, int side4){
+        s1 = side1;
+        s2 = side2;
+        s3 = side3;
+        s4 = side4;
+        rectangle = true;
+    }
+    
+    //Pentagon Constructor
+    public Side(int side1, int side2, int side3, int side4, int side5){
+        s1 = side1;
+        s2 = side2;
+        s3 = side3;
+        s4 = side4;
+        s5 = side5;
+        pentagon = true;
+    }
+    
+    //Classify type of shape
+    public void typeTriangle(){
+        if(s4 == 0 && s5 == 0){
+            if(s1 == s2 && s1 == s3)
+                System.out.print("It's a(n) equilateral triangle with side lengths of: " + s1 + ", " + s2 + ", " + s3);
+            else if(s1 == s2 && s1 != s3)
+                System.out.print("It's a(n) isosceles triangle with side lengths of: " + s1 + ", " + s2 + ", " + s3);
+            else if(s1 != s2 && s1 == s3)
+                System.out.print("It's a(n) isosceles triangle with side lengths of: " + s1 + ", " + s2 + ", " + s3);
+            else if(s1 != s2 && s2 == s3)
+                System.out.print("It's a(n) isosceles triangle with side lengths of: " + s1 + ", " + s2 + ", " + s3);
+            else
+                System.out.print("It's a(n) scalene triangle with side lengths of: " + s1 + ", " + s2 + ", " + s3);
+        }
+    }
+    
+    public void typeRectangle(){
+        if(s5 == 0){
+            if(s1 == s2 && s1 == s3 && s1 == s4)
+                System.out.print("It's a(n) square with side lengths of: " + s1 + ", " + s2 + ", " + s3 + ", " + s4);
+            else if(s1 == s2 && s1 != s3 && s3 == s4)
+                System.out.print("It's a(n) rectangle with side lengths of: " + s1 + ", " + s2 + ", " + s3 + ", " + s4);
+            else if(s1 == s3 && s1 != s2 && s2 == s4)
+                System.out.print("It's a(n) rectangle with side lengths of: " + s1 + ", " + s2 + ", " + s3 + ", " + s4);
+            else if(s1 == s4 && s1 != s2 && s2 == s3)
+                System.out.print("It's a(n) rectangle with side lengths of: " + s1 + ", " + s2 + ", " + s3 + ", " + s4);
+        }
+    }
+    
+    public void typePentagon(){
+            if(s1 == s2 && s1 == s3 && s1 == s4 && s1 == s5)
+                System.out.print("It's a(n) regular pentagon with side lengths of: " + s1 + ", " + s2 + ", " + s3 + ", " + s4 + ", " + s5);
+            else if(s4 != 0 && s5 != 0)
+                System.out.print("It's a(n) pentagon with side lengths of: " + s1 + ", " + s2 + ", " + s3 + ", " + s4 + ", " + s5);
+    }
+    
+    //toString Method
+    //utilizes above methods, returns a blank to set the cursor on a new line
+    public String toString(){
+        typeTriangle();
+        typeRectangle();
+        typePentagon();
+        return "";
+    }
+    
+}
+
