@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class ThreeStrings
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        boolean equal=false;
+        // Ask the user for three strings.
+        System.out.println("First string?");
+        String str1 = input.next();
+        System.out.println("First string?");
+        String str2 = input.next();
+        System.out.println("First string?");
+        String str3 = input.next();
+        // Use a Boolean variable to test the comparison of 
+        // first+second equals third
+        // Remember since you are working with strings to 
+        // use equals() and NOT == !
+        if(str3.equals(str1+str2))
+            equal=true;
+        if(equal)
+            System.out.println(str1 + " + " + str2 + " is equal to " + str3 + "!");
+        else
+            System.out.println(str1 + " + " + str2 + " is not equal to " + str3 + "!");
+    }
+}
