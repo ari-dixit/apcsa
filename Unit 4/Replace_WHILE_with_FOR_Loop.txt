@@ -1,0 +1,13 @@
+public class Countdown
+{
+    public static void main(String[] args)
+    {
+        // Run this code first to see what is does. 
+        // Replace the while loop with an equivalent for loop.
+        int x = 10;
+        for(int y = x; x > 0; x--)
+        {
+            System.out.println(x);
+        }
+    }
+}

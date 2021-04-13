@@ -1,0 +1,12 @@
+public class MultiplicationTable
+{
+    public static void main(String[] args)
+    {
+        // Your code goes here!
+        int count = 1;
+        while(count<11){
+        System.out.println("4 * " + count + " = " + 4*count);
+        count++;
+        }
+    }
+}

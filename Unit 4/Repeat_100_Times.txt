@@ -1,0 +1,12 @@
+public class Repeat100
+{
+    public static void main(String[] args)
+    {
+        // Your code goes here!
+        int count = 0;
+        
+        for(int x = count; x < 100; x++){
+            System.out.println("Hello Karel");
+        }
+    }
+}
