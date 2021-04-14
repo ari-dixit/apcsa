@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class Palindromes
+{
+    /**
+     * This program lets the user input some text and
+     * prints out whether or not that text is a palindrome.
+     */
+    public static void main(String[] args)
+    {
+        // Create user input and let user know whether their word is a palindrome or not! 
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a word!");
+        String word = input.next();
+        if(isPalindrome(word))
+            System.out.println("Your word is a palindrome!");
+        else
+            System.out.println("Your word is not a palindrome!");
+        
+    }
+    
+    /**
+     * This method determines if a String is a palindrome,
+     * which means it is the same forwards and backwards.
+     * 
+     * @param text The text we want to determine if it is a palindrome.
+     * @return A boolean of whether or not it was a palindrome.
+     */
+    public static boolean isPalindrome(String text)
+    {
+        if(text.equals(reverse(text)))
+            return true;
+        
+        return false;
+    }
+    
+    /**
+     * This method reverses a String.
+     * 
+     * @param text The string to reverse.
+     * @return The new reversed String.
+     */
+    public static String reverse(String text)
+    {
+        // Your code goes here!
+        String temp = "";
+        for(int x = text.length()-1; x >=0; x--)
+            temp = temp + text.substring(x, x+1);
+        
+        return temp;
+    }
+
+}
