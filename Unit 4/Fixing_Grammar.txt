@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Grammar
+{
+    public static void main(String[] args)
+    {
+        // Ask the user to enter a sentence that uses the word 2 instead of to.
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a sentence");
+        String line = input.nextLine();
+        // Call the method useProperGrammar to process the string according to 
+        // the directions.
+            System.out.println(useProperGrammar(line));
+    }
+    
+    public static String useProperGrammar(String theText)
+    {
+        // Process the sentence that is sent to this method and replace every 2
+        // with the word to.
+        int count = 0;
+        for(int x = 0; x < theText.length(); x++){
+            if(theText.substring(x, x+1).equals("2")){
+                theText = theText.substring(0, x) + "to" + theText.substring(x+1, theText.length());
+                count++;
+            }
+        }
+        return "Fixed " +count+ " grammatical errors: " + theText;
+    }
+}
