@@ -1,0 +1,19 @@
+public class NumberTriangle
+{
+    public static void main(String[] args)
+    {
+       // Call makeNumberTriangle 
+       makeNumberTriangle();
+    }
+    
+    // Makes an upright triangle with the numbers 1-5
+    public static void makeNumberTriangle()
+    {
+        // Your code goes here! 
+        for(int x = 1; x<=5; x++){
+            for(int y = 1; y <=x; y++)
+                System.out.print(y + " ");
+            System.out.println();
+        }
+    }
+}
