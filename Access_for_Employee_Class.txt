@@ -1,0 +1,9 @@
+public class Employee
+{
+    private String name;
+    private int id;
+    private double salary;
+    
+    public Employee(String a, int b, double c){}
+    
+}
