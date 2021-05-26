@@ -1,0 +1,142 @@
+input.txt:
+---------
+A,(,)
+B,(,x + y,),* 5
+B,(,x + ,(,y,)
+
+
+Delimiters.java:
+---------------
+import java.util.ArrayList; // import the ArrayList class
+
+public class Delimiters
+{
+ /** The open and close delimiters. */
+ private String openDel;
+ private String closeDel;
+ /** Constructs a Delimiters object where open is the open delimiter and close is the
+ * close delimiter.
+ * Precondition: open and close are non-empty strings.
+ */
+ public Delimiters(String open, String close)
+ {
+ openDel = open;
+ closeDel = close;
+ }
+ /** Returns an ArrayList of delimiters from the array tokens, as described in part (a). */
+ public ArrayList<String> getDelimitersList(String[] tokens)
+ { 
+     /* to be implemented in part (a) */ 
+     ArrayList<String> delimiters = new ArrayList<String>();
+     
+     for (String t : tokens)
+        if (t.equals(openDel) || t.equals(closeDel))
+            delimiters.add(t);
+     return delimiters;
+ }
+ /** Returns true if the delimiters are balanced and false otherwise, as described in part (b).
+ * Precondition: delimiters contains only valid open and close delimiters.
+ */
+ public boolean isBalanced(ArrayList<String> delimiters)
+ { 
+     /* to be implemented in part (b) */
+    int numOpen = 0, numClosed = 0;
+    
+    for(String d : delimiters)
+    {
+        if(d.equals(openDel))
+            numOpen++;
+            
+        if(d.equals(closeDel))
+            numClosed++;
+        
+        if(numClosed > numOpen)
+            return false;
+    }
+    
+    return numOpen == numClosed;
+ }
+ // There may be instance variables, constructors, and methods that are not shown.
+}
+
+MyProgram.java:
+--------------
+import java.util.* ;
+import java.io.*;
+
+public class MyProgram
+/*****************************************************************
+ * 
+ *  DO NOT CHANGE THIS PROGRAM
+ * 
+ * **************************************************************/
+
+{
+   public static void main(String[] args) //throws FileNotFoundException
+    
+   {
+       //Scanner userInput = new Scanner(System.in);
+       try {
+           
+           String str = "input";
+      
+     Scanner userInput = new Scanner(new File(str +".txt"));
+     
+    // ...
+  
+      Delimiters d1 = new Delimiters(")", ")");
+
+      String[] b1;
+      ArrayList a1, a2, a3, a4, a5;
+      
+     // String str = "input";
+      //Scanner getName = new Scanner(System.in);
+      
+      
+      
+      //Scanner userInput = new Scanner(new File("input.txt"));
+      while(userInput.hasNextLine()){
+         String input = userInput.nextLine();
+         String[] result = input.split("\\,");
+         //System.out.println("result len= " +result.length);
+      
+         
+         //System.out.println(Arrays.toString(result));
+         if (result[0].equals("A"))
+         {
+            d1= new Delimiters(result[1], result[2]);
+         
+         }
+         else if (result[0].equals("B"))
+         {
+            b1 = new String[result.length-1];
+         
+         //ystem.out.println(b1.length);
+            for (int i =0; i<b1.length; i++)
+            {
+            //System.out.println("Hello");
+               b1 [i] = result[i+1];
+            }
+            a1= d1.getDelimitersList(b1);
+            System.out.println(a1);
+         
+            System.out.println(d1.isBalanced(a1));
+           
+         
+         
+         }
+         else
+         {
+         
+            System.out.println("Bad input record");
+         }
+      }
+       } catch (FileNotFoundException e) {
+    System.out.println("Bad file name");
+  }
+   }
+}
+   
+
+
+
