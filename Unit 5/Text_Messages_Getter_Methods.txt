@@ -1,0 +1,50 @@
+Messages.java:
+-------------
+public class Messages
+{
+    public static void main(String[] args)
+    {
+        // Your code here.
+        // Create two TextMessage objects and print them out.
+        TextMessage message1 = new TextMessage("Bob", "Tom", "Hi!");
+        TextMessage message2 = new TextMessage("Tom", "Bob", "Bye!");
+        
+        System.out.println(message1);
+        System.out.println(message2);
+    }
+}
+
+TextMessage.java:
+----------------
+public class TextMessage
+{
+    private String message;
+    private String sender;
+    private String receiver;
+    
+    public TextMessage(String from, String to, String theMessage)
+    {
+        sender = from;
+        receiver = to;
+        message = theMessage;
+    }
+    
+    public String toString()
+    {
+        return sender + " texted " + receiver + ": " + message;
+    }
+    
+    public String getSender(){
+        return sender;
+    }
+    
+    public String getReceiver(){
+        return receiver;
+    }
+    
+    public String getMessage(){
+        return message;
+    }
+}
+
+
