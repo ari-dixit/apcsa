@@ -1,0 +1,17 @@
+public class FirstArray
+{
+    public static void main(String[] args)
+    {
+      // Create the 3 arrays here
+      String[] name = {"Las Vegas", "Minsk", "Sao Paulo"};
+      int[] temp = {104, 73, 80};
+      double[] rain = {4.17, 26.7, 55.0};
+        
+      // Print all 3 arrays according to the output in the description
+      for(int x = 0; x < 3; x++){
+        System.out.println(name[x] + " has an average annual precipitation of " + rain[x] + " inches.");
+        System.out.println(name[x] + " has an average annual high temp of " + temp[x] + " degrees Fahrenheit.");
+      }
+    
+    }
+}

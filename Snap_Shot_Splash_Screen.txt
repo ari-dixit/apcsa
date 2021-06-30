@@ -1,0 +1,19 @@
+public class SnapShot
+{
+    public static void main(String[] args)
+    {
+        // Start here!
+        String[] app = new String[] {"Welcome", "to", "the snap shot", "app!"};
+        
+        for(int x = 0; x < app.length; x++)
+            System.out.println(app[x]);
+        
+        System.out.println();
+            
+        app[0] = "Upgrade";
+        app[app.length-1] = "premium app!";
+        
+        for(int x = 0; x < app.length; x++)
+            System.out.println(app[x]);
+    }
+}

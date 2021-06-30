@@ -1,0 +1,19 @@
+public class Scores
+{
+    public static void main(String[] args)
+    {
+        // Start here!
+        int[] scores = {80, 95, 82, 67, 100};
+        
+        for(int x = 0; x < scores.length; x++)
+            System.out.println(scores[x]);
+            
+        System.out.println();
+        
+        scores[2] = 72;
+        scores[scores.length-1] = 95;
+        
+        for(int x = 0; x < scores.length; x++)
+            System.out.println(scores[x]);
+    }
+}
