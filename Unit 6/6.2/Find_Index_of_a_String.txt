@@ -1,0 +1,30 @@
+MatchingString.java:
+-------------------
+public class MatchingString
+{
+
+    private static String[] arr = {"Hello", "Karel", "CodeHS!"};
+    
+    public static int findString(String myString)
+    {
+        // your code goes here!
+        for(int x = 0; x < arr.length; x++)
+            if(arr[x] == myString)
+                return x;
+                
+        return -1;
+    }
+}
+
+MatchingStringTester.java:
+-------------------------
+public class MatchingStringTester
+{
+   public static void main(String[] args)
+   {
+     System.out.println(MatchingString.findString("Karel"));
+     
+   }
+}
+
+
