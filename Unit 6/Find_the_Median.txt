@@ -1,0 +1,38 @@
+import java.util.*;
+public class Median
+{
+
+    public static void main(String[] args)
+    {
+        int[] numbers1 = {12, 75, 3, 17, 65, 22};
+        System.out.print("The median value of the EVEN array is " + median(numbers1));
+        
+        int[] numbers2 = {12, 75, 3, 17, 65, 22, 105};
+        System.out.print("\nThe median value of the ODD array is " + median(numbers2));
+        
+    }
+
+    public static double median(int[] arr)
+    {
+        // your code goes here!
+        int[] sorted = arr;
+        for (int i = 0; i < sorted.length; i++) {
+            for (int j = i+1; j < sorted.length; j++) {
+                if ( (sorted[i] > sorted[j]) && (i != j) ) {
+                    int temp = sorted[j];
+                    sorted[j] = sorted[i];
+                    sorted[i] = temp;
+                }
+            }
+        }
+        
+        /*for(int f = 0; f < arr.length; f++){
+            System.out.println(sorted[f]);
+        }*/
+        
+        if(sorted.length%2 == 0)
+            return ((double)sorted[sorted.length/2]+sorted[sorted.length/2-1])/2;
+            
+        return sorted[(sorted.length-1)/2];
+    }
+}
