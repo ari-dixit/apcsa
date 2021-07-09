@@ -1,0 +1,43 @@
+public class ChessBoard
+{
+    public static void main(String[] args)
+    {
+        //Create an 8x8 2D String array called chess.
+        String[][] chess = new String[8][8];
+        String[] zero = {"Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight", "Rook"};
+        chess[0] = zero;
+        for(int col = 0; col < chess[1].length; col++){
+            chess[1][col] = "Pawn";
+        }
+        
+        for(int row = 2; row < chess.length - 2; row++){
+            for(int col = 0; col < chess[1].length; col++){
+                chess[row][col] = "-";
+            }
+        }
+        for(int col = 0; col < chess[1].length; col++){
+            chess[6][col] = "Pawn";
+        }
+            
+        String[] seven = {"Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight", "Rook"};
+        chess[7] = seven;
+        
+        //Use this method to print the chess board onto the console
+        print(chess);
+        
+
+    }
+    
+    //Do not make alterations to this method!
+    public static void print(String[][] array)
+    {
+        for(String[] row: array)
+        {
+            for(String thing: row)
+            {
+                System.out.print(thing + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
