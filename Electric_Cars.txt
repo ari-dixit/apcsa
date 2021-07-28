@@ -1,0 +1,77 @@
+Car.java:
+--------
+public class Car {
+
+    //This code is complete
+    private String model;
+    private String mpg;
+
+    public Car(String model, String mpg){
+        this.model = model;
+        this.mpg = mpg;
+    }
+
+    public String getModel(){
+        return model;
+    }
+
+    public String getMPG(){
+        return mpg;
+    }
+
+    public String toString(){
+        return model + " gets " + mpg + " mpg.";
+    }
+}
+
+
+CarTester.java:
+--------------
+public class CarTester
+{
+    public static void main(String[] args)
+    {
+        // Create a Car object
+        Car test = new Car("test", "1");
+        // Print out the model
+        System.out.println(test.getModel());
+        // Print out the MPG
+        System.out.println(test.getMPG());
+        // Print the object
+        System.out.println(test.toString());
+        // Create an ElectricCar object
+        Car test2 = new ElectricCar("test2");
+        // Print out the model
+        System.out.println(test2.getModel());
+        // Print out the MPG
+        System.out.println(test2.getMPG());
+        // Print the object
+        System.out.println(test2.toString());
+    }
+}
+
+ElectricCar.java:
+----------------
+public class ElectricCar extends Car {
+
+    // Complete the constructor
+    public ElectricCar(String model){
+       super(model, "");
+    }
+
+    // Override the getMPG here.
+    // It should return: "Electric cars do not calculate MPG.
+    public String getMPG(){
+        return "Electric cars do not calculate MPG.";
+    }
+
+    // Override the toString() here.
+    // (model) is an  electric car.
+    public String toString(){
+        return super.getModel() + " is an electric car.";
+    }
+    
+    
+}
+
+
